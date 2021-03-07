@@ -11,6 +11,7 @@ layout = KeyboardLayoutUS(keyboard)
 
 led = digitalio.DigitalInOut(board.GP25)
 led.direction = digitalio.Direction.OUTPUT
+time.sleep(5)
 
 
 while True:
