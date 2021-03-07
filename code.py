@@ -42,7 +42,7 @@ while True:
     time.sleep(0.5)
     count = 100
     while count > 0:
-        layout.send("you have been hacked")
+        layout.write("you have been hacked")
         time.sleep(0.5)
         break
         count -= 1
