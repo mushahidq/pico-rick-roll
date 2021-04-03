@@ -20,20 +20,16 @@ uart = busio.UART(tx=board.GP0, rx=board.GP1)
 
 while True:
     data = uart.read(1)
-    print(data)
 
     if data is not None:
         led.value = True
 
         data_string = " ".join([chr(b) for b in data])
-        print(data_string, end="")
 
         led.value = False
 
         if data_string == "A":
             keyboard.send(Keycode.GUI, Keycode.R)
-            time.sleep(0.1)
-            layout.write("chrome\n")
             time.sleep(0.5)
             layout.write("http://www.5z8.info/worm_dvim \n")
         elif data_string == "B":
